@@ -1,3 +1,9 @@
+/**
+ * asks the user for their input for the game MadLibs
+ * @author Lorenzo Boschi
+ * @version 1.0
+ */
+
 import java.util.Scanner;
 
 public class MadLibsPlus {
@@ -20,42 +26,44 @@ public class MadLibsPlus {
 	String verb3;
 
 	public void play() {
-		System.out.println("Give me a adjective");
+		// gets all the user words
+		System.out.println("Give me a adjective or enter \"stop\" to exit");
 		adjective1 = scanner.next();
 
-		System.out.println("Give me a noun");
+		System.out.println("Give me a nounor enter \"stop\" to exit");
 		noun1 = scanner.next();
 
-		System.out.println("Give me a past tense verb");
+		System.out.println("Give me a past tense verb or enter \"stop\" to exit");
 		verb1 = scanner.next();
 
-		System.out.println("Give me a adverb");
+		System.out.println("Give me a adverb or enter \"stop\" to exit");
 		adverb1 = scanner.next();
 
-		System.out.println("Give me a another adjective");
+		System.out.println("Give me a another adjective or enter \"stop\" to exit");
 		adjective2 = scanner.next();
 
-		System.out.println("Give me a another noun");
+		System.out.println("Give me a another noun or enter \"stop\" to exit");
 		noun2 = scanner.next();
 
-		System.out.println("Give me an animal");
+		System.out.println("Give me an animal or enter \"stop\" to exit");
 		animal1 = scanner.next();
 
-		System.out.println("Give me a another adjective");
+		System.out.println("Give me a another adjective or enter \"stop\" to exit");
 		adjective3 = scanner.next();
 
-		System.out.println("Give me a another verb");
+		System.out.println("Give me a another verb or enter \"stop\" to exit");
 		verb2 = scanner.next();
 
-		System.out.println("Give me a another adverb");
+		System.out.println("Give me a another adverb or enter \"stop\" to exit");
 		adverb2 = scanner.next();
 
-		System.out.println("Give me a another verb");
+		System.out.println("Give me a another past tense verb or enter \"stop\" to exit");
 		verb3 = scanner.next();
 
-		System.out.println("Give me a another adjective");
+		System.out.println("Give me a another adjective or enter \"stop\" to exit");
 		adjective4 = scanner.next();
 
+		// final story print
 		System.out.println("Today I went to the zoo. I saw a " + adjective1 + " " + noun1
 				+ " jumping up and down in its tree. \n They " + verb1 + " " + adverb1
 				+ " through the large tunnel that led to its " + adjective2 + " " + noun2
@@ -66,6 +74,41 @@ public class MadLibsPlus {
 				+ " day at the zoo.");
 		scanner.close();
 
+		// adds kill
+		while (adjective1.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (adjective2.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (adjective3.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (adjective4.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (noun1.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (noun2.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (animal1.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (adverb1.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (adverb2.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (verb1.equalsIgnoreCase("stop")) {
+			return;
+		}
+		while (verb3.equalsIgnoreCase("stop")) {
+			return;
+		}
+		return;
 	}
 
 	public MadLibsPlus() {

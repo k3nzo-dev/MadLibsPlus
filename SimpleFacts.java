@@ -1,100 +1,224 @@
 
 /**
-* Plays the game MadLibs where it takes user imput
-* @author Lorenzo Boschi
-* @version 1.0
-*/
+ * provides the math functions
+ * @author Lorenzo Boschi
+ * @version 1.0
+ */
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SimpleFacts {
 	Scanner scanner = new Scanner(System.in);
 
 	public void play() {
-		System.out.println("Would you like to caluclate the average(1) \n Caluclate the surface area of a cube(2)"
-				+ "\n Find the amount of coins in a dollar amount(3)");
+		System.out.println("Would you like to caluclate the average(1) \n Or caluclate the surface area of a cube(2)"
+				+ "\n Or enter \" exit\" to leave");
 		String choice1 = scanner.next();
-
+		while (choice1.equalsIgnoreCase("exit")) {
+			return;
+		}
 		if (choice1.equalsIgnoreCase("1")) {
-			System.out.println("Please enter a number");
-			int num1 = Integer.parseInt(scanner.next());
-			System.out.print("Your sum is now " + num1);
-			System.out.println("");
+			ArrayList<Integer> inputs = new ArrayList<Integer>();
+			int num1 = 0;
+			int num2 = 0;
+			int num3 = 0;
+			int num4 = 0;
+			int num5 = 0;
+			int num6 = 0;
+			int num7 = 0;
+			int num8 = 0;
+			int num9 = 0;
+			int num10 = 0;
+			int num11 = 0;
+			int num12 = 0;
+			/*
+			 * grabs all the user imput
+			 */
+			boolean cont = true;
+			while (cont == true) {
+				try {
+					System.out.println(
+							"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+					num1 = Integer.parseInt(scanner.next());
+					System.out.print("Your sum is now " + num1);
+					System.out.println("");
 
-			System.out.println("Please enter a number");
-			int num2 = Integer.parseInt(scanner.next());
-			System.out.println("Your sum is now " + (num1 + num2));
-			System.out.println("");
+					if (num1 <= 0) {
 
-			System.out.println("Please enter a number");
-			int num3 = Integer.parseInt(scanner.next());
-			System.out.println("Your sum is now " + (num1 + num2 + num3));
-			System.out.println("");
+						cont = false;
+					} else {
+						inputs.add(num1);
+						System.out.println(
+								"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+						num2 = Integer.parseInt(scanner.next());
+						System.out.println("Your sum is now " + (num1 + num2));
+						System.out.println("");
+						if (num2 <= 0) {
+							cont = false;
+						} else {
+							inputs.add(num2);
+							System.out.println(
+									"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+							num3 = Integer.parseInt(scanner.next());
+							System.out.println("Your sum is now " + (num1 + num2 + num3));
+							System.out.println("");
 
-			System.out.println("Please enter a number");
-			int num4 = Integer.parseInt(scanner.next());
-			System.out.println("Your sum is now " + (num1 + num2 + num3 + num4));
-			System.out.println("");
+							if (num3 <= 0) {
+								cont = false;
+							} else {
+								inputs.add(num3);
+								System.out.println(
+										"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+								num4 = Integer.parseInt(scanner.next());
+								System.out.println("Your sum is now " + (num1 + num2 + num3 + num4));
+								System.out.println("");
+								if (num4 <= 0) {
+									cont = false;
+								} else {
+									inputs.add(num4);
+									System.out.println(
+											"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+									num5 = Integer.parseInt(scanner.next());
+									System.out.println("Your sum is now " + (num1 + num2 + num3 + num4 + num5));
+									System.out.println("");
+									if (num5 <= 0) {
+										cont = false;
+									} else {
+										inputs.add(num5);
+										System.out.println(
+												"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+										num6 = Integer.parseInt(scanner.next());
+										System.out.println(
+												"Your sum is now " + (num1 + num2 + num3 + num4 + num5 + num6));
+										System.out.println("");
 
-			System.out.println("Please enter a number");
-			int num5 = Integer.parseInt(scanner.next());
-			System.out.println("Your sum is now " + (num1 + num2 + num3 + num4 + num5));
-			System.out.println("");
+										if (num6 <= 0) {
+											cont = false;
+										} else {
+											inputs.add(num6);
+											System.out.println(
+													"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+											num7 = Integer.parseInt(scanner.next());
+											System.out.println("Your sum is now "
+													+ (num1 + num2 + num3 + num4 + num5 + num6 + num7));
+											System.out.println("");
 
-			System.out.println("Please enter a number");
-			int num6 = Integer.parseInt(scanner.next());
-			System.out.println("");
+										}
+										if (num7 <= 0) {
+											cont = false;
+										} else {
+											inputs.add(num7);
+											System.out.println(
+													"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+											num8 = Integer.parseInt(scanner.next());
+											System.out.println("Your sum is now "
+													+ (num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8));
+											System.out.println("");
 
-			System.out.println("Your final sum is " + (num1 + num2 + num3 + num4 + num5 + num6));
-			int total = num1 + num2 + num3 + num4 + num5 + num6;
-			double average = total / 6.0;
+											if (num8 <= 0) {
+												cont = false;
+											} else {
+												inputs.add(num8);
+												System.out.println(
+														"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+												num8 = Integer.parseInt(scanner.next());
+												System.out.println("");
+												System.out.println("Your sum is now " + (num1 + num2 + num3 + num4
+														+ num5 + num6 + num7 + num8 + num9));
+
+												if (num9 <= 0) {
+													cont = false;
+												} else {
+													inputs.add(num9);
+													System.out.println(
+															"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+													num10 = Integer.parseInt(scanner.next());
+													System.out.println("Your sum is now " + (num1 + num2 + num3 + num4
+															+ num5 + num6 + num7 + num8 + num9 + num10));
+													System.out.println("");
+
+												}
+												if (num10 <= 0) {
+													cont = false;
+												} else {
+													inputs.add(num10);
+													System.out.println(
+															"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+													num11 = Integer.parseInt(scanner.next());
+													System.out.println("Your sum is now " + (num1 + num2 + num3 + num4
+															+ num5 + num6 + num7 + num8 + num9 + num10 + num11));
+													System.out.println("");
+
+												}
+												if (num11 <= 0) {
+													cont = false;
+												} else {
+													inputs.add(num11);
+													System.out.println(
+															"Please enter a number larger than 0.  Enter a \"Exit\" or \"0\" line to finallize");
+													num12 = Integer.parseInt(scanner.next());
+													System.out.println("Your sum is now "
+															+ (num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8
+															+ num9 + num10 + num11 + num12));
+													System.out.println("");
+
+													if (num12 <= 0) {
+														cont = false;
+													} else {
+														inputs.add(num12);
+													}
+												}
+											}
+										}
+									}
+								}
+
+							}
+						}
+					}
+
+				} catch (Exception e) {
+					cont = false;
+				}
+			}
+
+			double numbers = (double) inputs.size();
+			// find the total regardless of length
+			int total = 0;
+			int i = 0;
+			while (i < numbers) {
+				total = inputs.get(i) + total;
+				i++;
+			}
+			System.out.println("Your final sum is " + total);
+
+			// fix the (1,2,3) miscalucation
+			double average = total / (numbers);
 
 			System.out.println("");
 			System.out.println("The average is " + average);
 
 		} else if (choice1.equalsIgnoreCase("2")) {
+			// takes the of the cube dimentions
 			System.out.println("Please enter the height of the cube");
-			int height1 = Integer.parseInt(scanner.next());
+			int height = Integer.parseInt(scanner.next());
 			System.out.println("");
 
 			System.out.println("Please enter the width	 of the cube");
-			int width1 = Integer.parseInt(scanner.next());
+			int width = Integer.parseInt(scanner.next());
 			System.out.println("");
 
-			System.out.println("The surface area of the cube is " + ((height1 * width1) * 6) + "");
-
-		} else if (choice1.equalsIgnoreCase("3")) {
-
-			System.out.println("Please enter the amount of money you would like to use in dollars");
-			int money = Integer.parseInt(scanner.next());
-			int quarters = money / 4;
-			money = money % 25;
-			if (money > 1) {
-				int dimes = money / 10;
-				money = money % 10;
-				if (money > 1) {
-					int nickels = money / 20;
-					money = money % 20;
-					System.out.print(money + " in coins would be " + quarters + " quarter(s), " + dimes + " dime(s), "
-							+ nickels + "nickel(s).");
-					if (money > 1) {
-						System.out.println(money + " in coins would be " + quarters + " quarter(s), " + dimes
-								+ " dime(s), " + nickels + "nickel(s), and " + money + " pennie(s).");
-					} else {
-						System.out.println("error");
-					}
-				} else {
-					System.out.print(money + " in coins would be " + quarters + " quarters, " + dimes + " dimes.");
-				}
-			} else {
-				System.out.print(money + " in coins would be " + quarters + " quarters.");
-			}
+			// finds one side of the cube multiply and by 6
+			System.out.println("The surface area of the cube is " + ((height * width) * 6) + "");
 
 		} else {
-			System.exit(0);
+			scanner.close();
+
+			return;
 
 		}
-		scanner.close();
+		return;
 	}
 
 	public SimpleFacts() {
